@@ -268,6 +268,117 @@ a:hover {
   margin-top: var(--space-m);
 }
 
+/* lightbox (assets/js/lightbox.js): the picture in an outlined white frame on a dark backdrop */
+html:has(.lightbox[open]) {
+  overflow: hidden;
+}
+
+.lightbox {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 4.5rem calc(var(--gutter-r) + 3.5rem) 1.5rem calc(var(--gutter-l) + 3.5rem);
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+}
+
+.lightbox[open] {
+  display: grid;
+  place-items: center;
+}
+
+.lightbox::backdrop {
+  background: color-mix(in srgb, var(--ink) 94%, transparent);
+}
+
+.lightbox figure {
+  margin: 0;
+  max-width: 100%;
+  padding: 10px;
+  background: var(--paper);
+  border: var(--line-thick) solid var(--ink);
+  box-shadow: 8px 8px 0 var(--yellow);
+}
+
+.lightbox img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100dvh - 10rem);
+  width: auto;
+  margin-inline: auto;
+}
+
+.lightbox figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-s);
+  padding-top: 0.5rem;
+  font-weight: 700;
+}
+
+.lightbox figcaption:has(span:empty + span:empty) {
+  display: none;
+}
+
+.lightbox .lb-count {
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.lightbox .button {
+  position: fixed;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.lightbox .button[hidden] {
+  display: none;
+}
+
+.lightbox .lb-close {
+  --bg: var(--pink);
+  top: 1rem;
+  right: var(--gutter-r);
+}
+
+.lightbox .lb-prev,
+.lightbox .lb-next {
+  --bg: var(--yellow);
+  top: 50%;
+  margin-top: -1.375rem;
+}
+
+.lightbox .lb-prev {
+  left: var(--gutter-l);
+}
+
+.lightbox .lb-next {
+  right: var(--gutter-r);
+}
+
+@media (max-width: 40rem) {
+  .lightbox {
+    padding: 4.5rem var(--gutter-r) 5rem var(--gutter-l);
+  }
+
+  .lightbox img {
+    max-height: calc(100dvh - 13rem);
+  }
+
+  .lightbox .lb-prev,
+  .lightbox .lb-next {
+    top: auto;
+    bottom: 1rem;
+    margin-top: 0;
+  }
+}
+
 @media (max-width: 40rem) {
   .site-logo img {
     height: 32px;
