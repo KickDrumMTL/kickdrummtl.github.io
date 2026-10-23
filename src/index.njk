@@ -1,5 +1,10 @@
 ---
 layout: base.njk
 ---
-<h1>Goodbye KickDrum!</h1>
-<p>The archive is on its way.</p>
+{% set logo = images["brand/logo"] %}
+{% set panels = images["brand/panels"] %}
+<section class="goodbye wrap">
+  <h1>Goodbye <span class="kd"><img src="{{ logo['600'].url }}" srcset="{{ logo['600'].url }} 600w, {{ logo['1200'].url }} 1200w" sizes="(max-width: 40rem) 60vw, 330px" width="{{ logo['600'].w }}" height="{{ logo['600'].h }}" alt="KickDrum">!</span></h1>
+  <p>The archive is on its way.</p>
+  <img class="panels" src="{{ panels['1400'].url }}" srcset="{{ panels['700'].url }} 700w, {{ panels['1400'].url }} 1400w" sizes="(max-width: 72rem) 100vw, 1100px" width="{{ panels['1400'].w }}" height="{{ panels['1400'].h }}" alt="">
+</section>

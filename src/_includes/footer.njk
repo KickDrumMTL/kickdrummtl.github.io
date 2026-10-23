@@ -1,8 +1,12 @@
+{% set kd = images["brand/kd-round"]["160"] %}
 <footer class="site-footer">
-  <p>
-    <a href="{{ site.instagram }}">Instagram</a>
-    <a href="{{ site.facebook }}">Facebook</a>
-    <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-  </p>
-  <p>{{ site.title }} {{ site.years }}</p>
+  <div class="wrap">
+    <img class="kd" src="{{ kd.url }}" width="56" height="56" alt="">
+    <span class="years">{{ site.title }} {{ site.years }}</span>
+    <ul class="links">
+      <li><a href="{{ site.instagram }}">Instagram</a></li>
+      <li><a href="{{ site.facebook }}">Facebook</a></li>
+      <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+    </ul>
+  </div>
 </footer>

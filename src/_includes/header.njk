@@ -1,9 +1,11 @@
+{% set logo = images["brand/logo"] %}
 <header class="site-header">
-  <a class="site-name" href="/">{{ site.title }}</a>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/events/">Shows</a>
-    <a href="/merch/">Merch</a>
-    <a href="/about/">About</a>
-  </nav>
+  <div class="wrap">
+    <a class="site-logo" href="/"><img src="{{ logo['300'].url }}" srcset="{{ logo['300'].url }} 300w, {{ logo['600'].url }} 600w" sizes="140px" width="{{ logo['300'].w }}" height="{{ logo['300'].h }}" alt="{{ site.title }} home"></a>
+    <nav class="site-nav" aria-label="Main">
+      {% for item in [{ url: "/events/", label: "Shows" }, { url: "/merch/", label: "Merch" }, { url: "/about/", label: "About" }] %}
+      <a class="button" href="{{ item.url }}"{% if page.url.startsWith(item.url) %} aria-current="page"{% endif %}>{{ item.label }}</a>
+      {% endfor %}
+    </nav>
+  </div>
 </header>
