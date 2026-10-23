@@ -1,0 +1,13 @@
+{#- Stand-in for a show with no poster (D47). `n` counts the placeholders in a list so the
+    logo colours take turns and two neighbours never match. -#}
+{% macro placeholderCard(event, n = 0) %}
+{%- set c = event | cardInfo -%}
+{%- set colours = ["yellow", "pink", "mint", "blue", "orange"] -%}
+<div class="placeholder-card" style="--c: var(--{{ colours[n % 5] }})">
+  <p class="date"><span>{{ c.weekday }}</span><b>{{ c.monthDay }}</b><span>{{ c.year }}</span></p>
+  <p class="who"><b>{{ c.headliner }}</b>{% if c.with.length %}<span>with {{ c.with | join(", ") }}{% if c.more %} + {{ c.more }} more{% endif %}</span>{% endif %}</p>
+  {%- if c.venue %}
+  <p class="where">{{ c.venue }}</p>
+  {%- endif %}
+</div>
+{% endmacro %}

@@ -268,6 +268,90 @@ a:hover {
   margin-top: var(--space-m);
 }
 
+/* placeholder card (_includes/placeholder-card.njk): a show with no poster. Sizes follow the
+   card's own width, so the same card works on the wall, on phones and on an event page */
+.placeholder-card {
+  container-type: inline-size;
+  height: 100%;
+  aspect-ratio: 4 / 5;
+  display: flex;
+  flex-direction: column;
+  background: var(--c, var(--yellow));
+}
+
+.placeholder-card p {
+  margin: 0;
+}
+
+.placeholder-card .date {
+  display: flex;
+  flex-direction: column;
+  padding: 7cqi 8cqi 0;
+  line-height: 0.95;
+}
+
+.placeholder-card .date span {
+  font-size: 8cqi;
+  font-weight: 700;
+}
+
+.placeholder-card .date span:first-child {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.placeholder-card .date b {
+  font-size: 19cqi;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.placeholder-card .who {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 1.5cqi;
+  padding: 6cqi 8cqi;
+}
+
+.placeholder-card .who b {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 11cqi;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.placeholder-card .who span {
+  font-size: 7.5cqi;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.placeholder-card .where {
+  padding: 3cqi 8cqi 3.5cqi;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 7cqi;
+  font-weight: 700;
+  line-height: 1.2;
+  background: var(--paper);
+  border-top: var(--line) solid var(--ink);
+}
+
+/* small cards (phone wall): headliner only */
+@container (max-width: 130px) {
+  .placeholder-card .who span {
+    display: none;
+  }
+}
+
 /* lightbox (assets/js/lightbox.js): the picture in an outlined white frame on a dark backdrop */
 html:has(.lightbox[open]) {
   overflow: hidden;
