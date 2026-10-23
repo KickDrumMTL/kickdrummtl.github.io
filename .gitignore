@@ -1,0 +1,9 @@
+# Build
+node_modules/
+_site/
+.wrangler/
+.env
+
+# OS
+.DS_Store
+Thumbs.db

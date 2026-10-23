@@ -1,0 +1,51 @@
+:root {
+  --text: #1a1a1a;
+  --muted: #666;
+  --bg: #fff;
+  --gutter: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.5;
+}
+
+.site-header,
+main,
+.site-footer {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: var(--gutter);
+}
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.site-name {
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+}
+
+nav a {
+  margin-left: 1rem;
+  color: inherit;
+}
+
+.site-footer {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.site-footer a {
+  margin-right: 1rem;
+  color: inherit;
+}

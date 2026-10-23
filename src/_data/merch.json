@@ -1,0 +1,54 @@
+{
+  "items": [
+    {
+      "slug": "orange-ink-white-tshirt",
+      "name": "Orange ink white KickDrum t-shirt",
+      "price": "$21",
+      "material": "Gildan Heavy Cotton, 99% cotton and 1% polyester, water-based ink",
+      "photos": [
+        { "source": "orange-on-white-tshirt-1-mfrh-original.jpg", "alt": "White t-shirt with the KickDrum print in orange ink, on a hanger" },
+        { "source": "orange-on-white-tshirt-worn-mfrh-original.jpg", "alt": "Someone wearing the white t-shirt with the orange KickDrum print" }
+      ]
+    },
+    {
+      "slug": "black-ink-white-tshirt",
+      "name": "Black ink white KickDrum t-shirt",
+      "price": "$21",
+      "material": "Gildan Heavy Cotton, 99% cotton and 1% polyester, water-based ink",
+      "photos": [
+        { "source": "black-on-white-tshirt-mfrh-original.jpg", "alt": "White t-shirt with the KickDrum print in black ink, on a hanger" },
+        { "source": "black-on-white-tshirt-worn-mfrh-original.jpg", "alt": "Someone wearing the white t-shirt with the black KickDrum print" }
+      ]
+    },
+    {
+      "slug": "orange-ink-light-blue-hoodie",
+      "name": "Orange ink light blue KickDrum hoodie",
+      "price": "$41.50",
+      "material": "Gildan Heavy Blend, 50% cotton and 50% polyester, water-based ink",
+      "photos": [
+        { "source": "orange-on-blue-hood-mfrh-original.jpg", "alt": "Light blue hoodie with the KickDrum print in orange ink, on a hanger" },
+        { "source": "orange-on-blue-hoodie-worn-mfrh-original.jpg", "alt": "Someone wearing the light blue hoodie with the orange KickDrum print" }
+      ]
+    },
+    {
+      "slug": "black-ink-light-blue-hoodie",
+      "name": "Black ink light blue KickDrum hoodie",
+      "price": "$41.50",
+      "material": "Gildan Heavy Blend, 50% cotton and 50% polyester, water-based ink",
+      "photos": [
+        { "source": "black-on-blue-hoodie-mfrh-original.jpg", "alt": "Light blue hoodie with the KickDrum print in black ink, on a hanger" },
+        { "source": "black-on-blue-hoodie-worn-mfrh-original.jpg", "alt": "Someone wearing the light blue hoodie with the black KickDrum print" }
+      ]
+    },
+    {
+      "slug": "teal-ink-cream-tote",
+      "name": "Teal ink cream KickDrum tote bag",
+      "price": "$21",
+      "material": "Cotton canvas with reinforced seams, plastisol ink, 15\" tall, 14\" wide and 4\" deep with 24\" handles",
+      "photos": [
+        { "source": "teal-white-tote-mfrh-original.jpg", "alt": "Cream tote bag with the KickDrum print in teal ink, hanging on a wall hook" },
+        { "source": "teal-on-white-tote-mfrh-original.jpg", "alt": "Someone carrying the cream tote bag with the teal KickDrum print on their shoulder" }
+      ]
+    }
+  ]
+}
